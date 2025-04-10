@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { 
-  Shield, 
+  PlusCircle, 
+  List, 
   BarChart2, 
-  PieChart, 
   Clock, 
   Bell, 
   Smartphone, 
-  CreditCard, 
-  Zap, 
-  Lock
+  Wallet, 
+  DollarSign, 
+  Search
 } from 'lucide-react';
 
 const FeatureCard = ({ 
@@ -37,49 +37,49 @@ const FeatureCard = ({
 const Features: React.FC = () => {
   const features = [
     {
+      icon: PlusCircle,
+      title: "Easy Expense Entry",
+      description: "Quickly add your daily expenses with just a few taps - no complicated forms or categories."
+    },
+    {
+      icon: List,
+      title: "Expense List",
+      description: "View all your expenses in a simple, chronological list to keep track of your spending."
+    },
+    {
       icon: BarChart2,
-      title: "Smart Budgeting",
-      description: "Set customizable budgets for different categories and track your spending habits to stay financially disciplined."
-    },
-    {
-      icon: PieChart,
-      title: "Visual Analytics",
-      description: "View comprehensive charts and graphs that break down your expenses and help identify spending patterns."
-    },
-    {
-      icon: Clock,
-      title: "Recurring Expenses",
-      description: "Set up automated tracking for recurring expenses like subscriptions and monthly bills."
+      title: "Basic Reports",
+      description: "See your spending totals by day, week, or month with easy-to-understand charts."
     },
     {
       icon: Bell,
-      title: "Smart Notifications",
-      description: "Receive timely alerts when you're approaching budget limits or when bills are due."
+      title: "Spending Alerts",
+      description: "Get simple notifications when you've spent more than usual in a single day."
+    },
+    {
+      icon: Clock,
+      title: "Monthly Summaries",
+      description: "Review how much you've spent at the end of each month with a simple summary report."
     },
     {
       icon: Smartphone,
       title: "Mobile Friendly",
-      description: "Access your financial data on any device with our responsive interface designed for desktops and mobile."
+      description: "Use the app on your phone or computer with the same simple interface."
     },
     {
-      icon: CreditCard,
-      title: "Multiple Accounts",
-      description: "Connect and manage multiple bank accounts and credit cards in one central dashboard."
+      icon: Wallet,
+      title: "Expense Categories",
+      description: "Organize expenses into basic categories like food, transport, and entertainment."
     },
     {
-      icon: Zap,
-      title: "Quick Entry",
-      description: "Add new expenses in seconds with our streamlined expense entry form and category suggestions."
+      icon: DollarSign,
+      title: "Budget Tracking",
+      description: "Set a simple monthly budget and track how much you've spent against it."
     },
     {
-      icon: Shield,
-      title: "Secure Data",
-      description: "Rest easy knowing your financial data is encrypted and protected with industry-leading security."
-    },
-    {
-      icon: Lock,
-      title: "Private by Design",
-      description: "Your financial data is yours alone - we never share or sell your information to third parties."
+      icon: Search,
+      title: "Search Expenses",
+      description: "Find specific expenses quickly by searching for descriptions or amounts."
     }
   ];
 
@@ -89,24 +89,24 @@ const Features: React.FC = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-500 to-app-blue text-white">
+        <section className="py-12 bg-gradient-to-r from-blue-500 to-app-blue text-white">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Powerful Features for Your Financial Journey</h1>
-            <p className="text-xl max-w-3xl mx-auto mb-8">
-              Our expense tracker combines powerful tools with an intuitive interface to help you manage your finances with confidence.
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">Simple Expense Tracking</h1>
+            <p className="text-lg max-w-2xl mx-auto mb-6">
+              Track your daily expenses with our easy-to-use expense tracker designed for beginners.
             </p>
             <Button asChild size="lg" className="bg-white text-app-blue hover:bg-gray-100">
-              <Link to="/signup">Start Your Free Trial</Link>
+              <Link to="/signup">Start Tracking for Free</Link>
             </Button>
           </div>
         </section>
         
         {/* Features Grid */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Explore Our Features</h2>
+            <h2 className="text-2xl font-bold text-center mb-8">Simple Features for Everyday Use</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, index) => (
                 <FeatureCard 
                   key={index}
@@ -120,21 +120,21 @@ const Features: React.FC = () => {
         </section>
         
         {/* CTA Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 md:p-12 shadow-md">
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 md:p-8 shadow-md">
               <div className="text-center">
-                <h2 className="text-3xl font-bold mb-6">Ready to transform your financial management?</h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Join thousands of users who have improved their financial health with our powerful expense tracking tools.
+                <h2 className="text-2xl font-bold mb-4">Ready to start tracking your expenses?</h2>
+                <p className="text-lg text-gray-600 mb-6">
+                  Join thousands of beginners who have taken control of their spending with our simple expense tracker.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
                   <Button asChild size="lg">
-                    <Link to="/signup">Get Started Today</Link>
+                    <Link to="/signup">Get Started Now</Link>
                   </Button>
                   <Button asChild variant="outline" size="lg">
-                    <Link to="/contact">Contact Sales</Link>
+                    <Link to="/login">Log In</Link>
                   </Button>
                 </div>
               </div>
