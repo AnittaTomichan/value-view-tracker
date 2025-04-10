@@ -14,15 +14,24 @@ const Home: React.FC = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-blue-500 to-app-blue text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Track Your Expenses Effortlessly</h1>
-            <p className="text-xl mb-8">Smart budgeting and insightful reports to help you stay on top of your finances.</p>
-            <Button asChild size="lg" className="bg-white text-app-blue hover:bg-gray-100">
-              <Link to="/signup">
-                Get Started
-                <ChevronRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+          <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Track Your Expenses Effortlessly</h1>
+              <p className="text-xl mb-8">Smart budgeting and insightful reports to help you stay on top of your finances.</p>
+              <Button asChild size="lg" className="bg-white text-app-blue hover:bg-gray-100">
+                <Link to="/signup">
+                  Get Started
+                  <ChevronRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+            <div className="md:w-1/2">
+              <img 
+                src="/lovable-uploads/03a20496-7387-4aec-9908-579cc406b132.png" 
+                alt="Money management illustration" 
+                className="max-w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </section>
         
