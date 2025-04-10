@@ -27,8 +27,8 @@ const Home: React.FC = () => {
             </div>
             <div className="md:w-1/2">
               <img 
-                src="/lovable-uploads/c4b2036a-21c7-40cc-88a4-775b47439371.png"
-                alt="Financial protection umbrella over business assets and data" 
+                src="/lovable-uploads/79a26b7f-48d7-4fa2-a556-f538562b6740.png"
+                alt="Stacks of coins with growth chart showing financial success" 
                 className="max-w-full h-auto rounded-lg shadow-lg"
               />
             </div>
